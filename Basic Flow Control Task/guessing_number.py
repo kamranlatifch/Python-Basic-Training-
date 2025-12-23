@@ -1,5 +1,5 @@
 def guessing_game():
-    target_number = 58  # predefined number to guess
+    target_number = 58
     attempts = 0
     is_guessed = False
 
