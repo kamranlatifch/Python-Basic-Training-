@@ -29,6 +29,14 @@ def function_3(**kwargs):
         print(f"{key} = {value}")
 
 
+def master_function(normal_arg, *args, **kwargs):
+    print(f"Normal argument: {normal_arg}")
+    for arg in args:
+        print(f"Argument as *arg: {arg}")
+    for key, value in kwargs.items():
+        print(f"Keyword argument as **kwargs: {key} = {value}")
+
+
 def main():
     function_1("John", 20, 12345)
 
@@ -54,6 +62,12 @@ def main():
         "Hasan": 1000,
     }
     function_3(**dict_of_kwargs)
+    print("############MASTER FUNCTION############")
+    master_function(
+        "Normal argument",
+        *list_of_args,
+        **dict_of_kwargs,
+    )
 
 
 if __name__ == "__main__":
